@@ -1,6 +1,6 @@
 <img src="images/GEMS Informatics Learning.png" width=600 alt="GEMS Learning Logo" title="GEMS Learning" />
 
-# X003.0 An Introduction to Spatial Data Analysis in R
+# X003.5 Geostatistics and Interpolation in R
 
 This course is designed for those who are interested in collecting, creating, processing, and interpolating geostatistical data. Through this course, you will learn variogram analysis and kriging methods to model and analyze spatial data based on information collected from sampled locations. You will have the opportunity to immediately practice your new skills via hands-on exercises focused on agri-food applications throughout the 2.5-hour course. 
 
@@ -33,7 +33,7 @@ The course will be delivered via a Jupyter Notebook hosted on the GEMS Informati
     ```
     
     
-## Week 2 Lecture: Introduction to spatial data and mapping in R
+## Lecture: Geostatistics and Interpolation
 1. Navigate to your `GEMSX003` directory using the following commands:
     ```shell
     cd classes
