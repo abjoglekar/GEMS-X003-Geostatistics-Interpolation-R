@@ -14,12 +14,33 @@ The course will be delivered via a Jupyter Notebook hosted on the GEMS Informati
 ## Initial Setup
 1. Login to GEMS Platform at https://gems.agroinformatics.org/
     - GEMS Platform uses Globus to authenticate your account, so if your institution is already linked to Globus (for example, University of Minnesota and many other universities), you can search and select your institution from the list and use your institutional account to log into GEMS Platform. Alternatively, you can log in using Google or ORCID iD, or create  your own Globus account to log in.   
+    
+2. Once logged in, click `Analyze > RStudio` from the homepage (top right corner). If you do not have an `Analyze` option next to `Data Products` and `My Workspace` please let your TA know immediately. They will need to assign you permissions using their administrator account. 
 
-2. Once logged in, click `Analyze > JupyterLab` from the homepage
+3. Install packages needed for course. If you have any issues please reference the R Troubleshooting document on Canvas and/or let your TA know immediately. 
+    ```shell
+    
+    # the `stars` and `tmaptools` packages are explicitly installed to enable
+    #   installation of `tmap` on the GEMS Platform
+    #   if you want to install `tmap` on your own machine, you can do so directly  
+    library(devtools)
+    install_version("stars", version="0.5-5") 
+    install.packages('tmaptools')
 
-3. Open a bash terminal by clicking 'Terminal' icon in the Launcher **OR** by clicking `File > New > Terminal`
+    packages_to_install <- c("tmap", "spData")
+    
+    for ( package in packages_to_install ) {
+        if (!require(package, character.only=T, quietly=T, warn.conflicts=F)) {
+            install.packages(package)
+        }
+    }
+    ```
 
-4. If the directories `classes\GEMSX003` were not created before, create directories for this class in the bash terminal using the following four commands  
+4. While your packages are installing, reclick on your GEMS Informatics Platform tab and click `Analyze > JupyterLab` from the homepage
+
+5. Open a bash terminal by clicking 'Terminal' icon in the Launcher **OR** by clicking `File > New > Terminal`
+
+6. If the directories `classes\GEMSX003` were not created before, create directories for this class in the bash terminal using the following four commands  
     ```shell
     mkdir classes  
     cd classes  
